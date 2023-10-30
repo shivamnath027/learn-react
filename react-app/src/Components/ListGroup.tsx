@@ -18,7 +18,14 @@ function ListGroup() {
       {items.length === 0 && <p>No Items found</p>}
       <ul className="list-group">
         {items.map((item) => (
-          <li>{item}</li>
+          <li
+            className="list-group-item"
+            key={item}
+            onClick={() => console.log("Clicked")}
+          >
+            {" "}
+            {item}
+          </li>
         ))}
       </ul>
     </>
