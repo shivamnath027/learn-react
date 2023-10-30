@@ -1,13 +1,12 @@
 import { Fragment, useState } from "react";
 // import { MouseEvent } from "react";
-function ListGroup() {
-  let items = [
-    "Bihar",
-    "Uttar Pradesh",
-    "Karnataka",
-    "Jharkhand",
-    "Jammu and Kashmir",
-  ];
+
+// { items: [], heading : string }
+interface Props {
+  items: string[];
+  heading: string;
+}
+function ListGroup(props: Props) {
   // let selectedIndex = 0;
   // Hook
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -26,9 +25,9 @@ function ListGroup() {
     <>
       <h1>list</h1>
       {/* { items.length===0 ? <p>No items found</p> : null}; */}
-      {items.length === 0 && <p>No Items found</p>}
+      {props.items.length === 0 && <p>No Items found</p>}
       <ul className="list-group">
-        {items.map((item, index) => (
+        {props.items.map((item, index) => (
           //here we have mapped index
           <li
             className={
