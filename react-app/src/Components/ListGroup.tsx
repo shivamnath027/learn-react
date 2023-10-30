@@ -8,11 +8,12 @@ function ListGroup() {
     "Jharkhand",
     "Jammu and Kashmir",
   ];
-  let selectedIndex = 0;
+  // let selectedIndex = 0;
   // Hook
-  const arr = useState(-1);
-  arr[0]; // variable {selectedIndex}
-  arr[1]; //updater function
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+
+  // arr[0]; // variable {selectedIndex}
+  // arr[1]; //updater function
   // items = [];
 
   // const handleClick = (event: MouseEvent) => console.log(event);
@@ -38,7 +39,7 @@ function ListGroup() {
             key={item}
             // onClick={handleClick}
             onClick={() => {
-              selectedIndex = index;
+              setSelectedIndex(index);
             }}
             // onClick={(event) => console.log(event)} // SYNTHETIC BASE EVENT
             // onClick={() => console.log(item,index)}
