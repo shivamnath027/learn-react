@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { MouseEvent } from "react";
 function ListGroup() {
   let items = [
     "Bihar",
@@ -8,6 +9,9 @@ function ListGroup() {
     "Jammu and Kashmir",
   ];
   // items = [];
+
+  const handleClick = (event: MouseEvent) => console.log(event);
+
   return (
     // <div> //We cannot use multiple components inside React thus we use a div tag to wrap them inside a single component
     // To use Fragment, is a better Idea
@@ -17,11 +21,15 @@ function ListGroup() {
       {/* { items.length===0 ? <p>No items found</p> : null}; */}
       {items.length === 0 && <p>No Items found</p>}
       <ul className="list-group">
-        {items.map((item) => (
+        {items.map((item, index) => (
+          //here we have mapped index
           <li
             className="list-group-item"
             key={item}
-            onClick={() => console.log(item)}
+            onClick={handleClick}
+            // onClick={(event) => console.log(event)} // SYNTHETIC BASE EVENT
+            // onClick={() => console.log(item,index)}
+            //here we have printed the index that is mapped to each Item in the List
           >
             {" "}
             {item}
