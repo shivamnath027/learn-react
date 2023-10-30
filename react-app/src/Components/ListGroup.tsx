@@ -10,7 +10,9 @@ function ListGroup() {
   ];
   let selectedIndex = 0;
   // Hook
-  useState;
+  const arr = useState(-1);
+  arr[0]; // variable {selectedIndex}
+  arr[1]; //updater function
   // items = [];
 
   // const handleClick = (event: MouseEvent) => console.log(event);
