@@ -13,6 +13,8 @@ function ListGroup() {
     //<Fragment> //The more Shortcut way to use Fragment is to use a <>
     <>
       <h1>list</h1>
+      {/* { items.length===0 ? <p>No items found</p> : null}; */}
+      {items.length === 0 && <p>No Items found</p>}
       <ul className="list-group">
         {items.map((item) => (
           <li>{item}</li>
