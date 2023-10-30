@@ -1,12 +1,13 @@
 import { Fragment } from "react";
 function ListGroup() {
-  const items = [
+  let items = [
     "Bihar",
     "Uttar Pradesh",
     "Karnataka",
     "Jharkhand",
     "Jammu and Kashmir",
   ];
+  items = [];
   return (
     // <div> //We cannot use multiple components inside React thus we use a div tag to wrap them inside a single component
     // To use Fragment, is a better Idea
