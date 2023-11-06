@@ -9,7 +9,6 @@ function App() {
     "Jharkhand",
     "Jammu and Kashmir",
   ];
-
   return (
     <div>
       <ListGroup items={items} heading={"Cities"} />
